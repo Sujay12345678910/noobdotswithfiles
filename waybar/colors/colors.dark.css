@@ -1,0 +1,17 @@
+/* Tokyo night dark enhanced color theme */
+
+@define-color module-bg     rgba(8, 8, 11, 0.75);
+@define-color tooltip-bg    rgba(16, 16, 16, 0.9);
+@define-color inactive      #787c99;
+@define-color workspace-fg  @fg;
+@define-color highlight     rgba(120, 124, 153, 0.25);
+@define-color border        #252525;
+
+/* Kitty palette (VSCode Dark+, muted) */
+@define-color fg            #c0c0c0;
+@define-color red           #c47a7a;
+@define-color green         #85b598;
+@define-color yellow        #cfc084;
+@define-color blue          #7c9fc4;
+@define-color magenta       #b58fb5;
+@define-color cyan          #7fb0bd;

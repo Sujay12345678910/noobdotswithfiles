@@ -1,0 +1,1 @@
+"hyprctl dispatch exec 'alacritty --class=peaclock -e peaclock'"
