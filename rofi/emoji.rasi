@@ -1,0 +1,74 @@
+configuration {
+  modi: "emoji";
+  font: "JetBrainsMono Nerd Font 14";
+  show-icons: true;
+  display-emoji: "😀";
+  kb-mode-previous: "$mod+a";
+}
+
+* {
+  background-color:      transparent;
+  text-color:           #cdd6f4;
+  font:                 "JetBrainsMono Nerd Font 14";
+
+  dark:                 #1e1e2e;
+  bg-alt:               #313244;
+  bg-selected:          #45475a;
+  accent:               #89b4fa;
+
+  background:           @dark;
+  border:               2px;
+  border-color:         #89b4fa;
+  border-radius:        12px;
+}
+
+window {
+  width:                35%;
+  location:             center;
+  anchor:               center;
+  padding:              12px;
+  border-radius:        14px;
+  background-color:     @dark;
+}
+
+inputbar {
+  children:             [ "textbox-prompt-colon", "entry" ];
+  padding:              10px;
+  border-radius:        10px;
+  background-color:     @bg-alt;
+  margin:               0px 0px 12px 0px;
+}
+
+textbox-prompt-colon {
+  str:                  "🔍";
+  padding:              0px 10px 0px 0px;
+  text-color:           @accent;
+}
+
+entry {
+  placeholder:          "Search emojis…";
+  placeholder-color:    #6c7086;
+}
+
+listview {
+  lines:                8;
+  spacing:              6px;
+  scrollbar:            false;
+  background-color:     transparent;
+}
+
+element {
+  padding:              8px 12px;
+  border-radius:        8px;
+}
+
+element selected.normal {
+  background-color:     @bg-selected;
+  text-color:           @accent;
+}
+
+element-text {
+  background-color:     transparent;
+  text-color:           inherit;
+  highlight:            bold #f9e2af;
+}

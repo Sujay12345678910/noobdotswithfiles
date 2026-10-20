@@ -1,0 +1,77 @@
+* {
+    bg:      #1a1b26;
+    bg-alt:  #24283b;
+    fg:      #c0caf5;
+    fg-dim:  #565f89;
+    accent:  #7aa2f7;
+
+    background-color: transparent;
+    text-color:       @fg;
+    font:             "CaskaydiaMono Nerd Font 12";
+}
+
+configuration { show-icons: true; }
+
+window {
+    width:            80%;
+    height:           75%;
+    background-color: @bg;
+    border:           2px;
+    border-color:     @accent;
+    border-radius:    14px;
+    padding:          20px;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    spacing:  16px;
+}
+
+inputbar {
+    background-color: @bg-alt;
+    border-radius:    10px;
+    padding:          10px 14px;
+    children:         [ prompt, entry ];
+}
+
+prompt { text-color: @accent; padding: 0 10px 0 0; }
+
+entry {
+    placeholder:       "Search…";
+    placeholder-color: @fg-dim;
+    cursor:            text;
+}
+
+listview {
+    columns:      4;
+    lines:        3;
+    spacing:      14px;
+    cycle:        true;
+    scrollbar:    false;
+    fixed-height: true;
+    flow:         horizontal;
+}
+
+element {
+    orientation:   vertical;
+    padding:       10px;
+    border-radius: 12px;
+    children:      [ element-icon, element-text ];
+}
+
+element selected {
+    background-color: @bg-alt;
+    border:           2px;
+    border-color:     @accent;
+}
+
+element-icon { size: 11em; horizontal-align: 0.5; }
+
+element-text {
+    horizontal-align: 0.5;
+    vertical-align:   0.5;
+    padding:          8px 0 0 0;
+    text-color:       @fg;
+}
+
+element selected element-text { text-color: @accent; }
